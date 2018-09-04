@@ -3,7 +3,16 @@
 import sys
 
 def rock_paper_scissors(n):
-  pass 
+    plays = ['rock', 'paper', 'scissors']
+    outcomes = []
+    def recurse(rounds, played):
+        if rounds == 0:
+            outcomes.append(played)
+            return
+        for i in range(len(plays)):
+            recurse(rounds - 1, played.append(plays[i]))
+    recurse(n, [])
+    return outcomes            
 
 if __name__ == "__main__":
   # Test out your implementation from the command line
